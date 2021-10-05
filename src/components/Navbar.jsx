@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { HomeOutlined, MoneyCollectOutlined, BulbOutlined, FundOUtlined, MenuOutlined } from '@ant-design/icons';
 
 import icon from '../components/images/askcoins.png';
+
 const Navbar = () => {
     return (
         <div className="nav-container">
@@ -12,8 +13,12 @@ const Navbar = () => {
                 <Typography.Title level={2} className="logo">
                     <Link to="/">AskCoins</Link>
                 </Typography.Title>
-                <Button className="menu-control-container"></Button>
             </div>
+            <Menu theme="dark">
+                <Menu.Item icon={<HomeOutlined />}>
+                    <Link to="/">Home</Link>
+                </Menu.Item>
+            </Menu>
             
         </div>
     )
